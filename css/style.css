@@ -41,10 +41,19 @@ h2 {
     font-family: Blinker, Helvetica, sans-serif;
 }
 #updated {
-    color: orange;
+    color: lightgreen;
     margin: -15px;
     padding-bottom: 30px;
 }
 hr {
     margin-top: -10px;
+}
+footer a {
+    color: lightblue;
+}
+footer a:hover {
+    color: lightyellow;
+}
+ul a:hover {
+    color: #485665;
 }
