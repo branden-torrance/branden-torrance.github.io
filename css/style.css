@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300&family=Roboto&display=swap');
+
+.content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+header {
+    background-color: #485665;
+    border-radius: 8px;
+    margin: auto;
+    padding: .75em;
+    text-align: center;
+}
+img {
+    float: right;
+    width: 170px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 8px 0px;
+}
+footer {
+    text-align: center;
+    background-color: #485665;
+    border-radius: 8px;
+    padding: 1px;
+    color: white;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+ul {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 2em;
+    color: white;
+    font-family: Blinker, Arial, sans-serif;
+}
+h2 {
+    font-size: 1.5em;
+    color: #485665;
+    font-family: Blinker, Helvetica, sans-serif;
+}
+#updated {
+    color: orange;
+    margin: -15px;
+    padding-bottom: 30px;
+}
+hr {
+    margin-top: -10px;
+}
