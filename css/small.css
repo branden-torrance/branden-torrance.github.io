@@ -1,5 +1,5 @@
 .content {
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
 }
 header {
@@ -20,19 +20,20 @@ footer {
     font-family: Roboto, Helvetica, sans-serif;
 }
 ul {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-bottom: 40px;
     font-family: Roboto, Helvetica, sans-serif;
 }
 h1 {
-    font-size: 1.5em;
+    font-size: 2em;
     color: white;
     font-family: Blinker, Arial, sans-serif;
 }
 h2 {
-    font-size: 1em;
+    font-size: 1.3em;
     color: #485665;
     font-family: Blinker, Helvetica, sans-serif;
+    padding-left: 10px;
 }
 #updated {
     color: lightgreen;
