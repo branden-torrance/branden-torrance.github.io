@@ -3,7 +3,7 @@
 
     header, nav, main, footer {
         max-width: 64rem;
-        margin:auto;
+        margin: auto;
     }
 
 /*----------- BODY --------------*/
@@ -11,9 +11,10 @@
 
 
 /*----------- HEADER --------------*/
-header img {width: 85px; border-radius: 50px;}
+header img {width: 85px;}
 header h1 {font-size: 2rem;}
-header h2 {font-size: 1.2rem;}
+header h2 {font-size: 1.4rem;}
+header {margin-bottom: -1rem;}
 
 
 /*----------- NAVIGATION --------------*/
@@ -25,5 +26,6 @@ header h2 {font-size: 1.2rem;}
 
 
 /*----------- FOOTER --------------*/
+
     
 } /* end of media query */
