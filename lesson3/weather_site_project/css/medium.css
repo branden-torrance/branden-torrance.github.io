@@ -3,7 +3,7 @@
 
 
     /*----------- BODY --------------*/
-    
+    body {font-size: 1rem;}
     
     
     /*----------- HEADER --------------*/
@@ -17,7 +17,7 @@
         }
         nav ul li {float: left; flex: 1 1 100%;}        
     
-        nav ul li a{padding: .7rem 1.1rem;}
+        nav ul li a{padding: .9rem 1.1rem;}
     
     
     /*----------- MAIN --------------*/
@@ -30,7 +30,7 @@
         grid-template-rows: 1fr 1fr;
         text-align: left;
     }
-    .personas section {
+    .personas p {
         margin-top: 2.3rem;
     }
     
