@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lesson W04 - Preston Town Page">
+    <meta name="author" content="Branden Torrance">
+    <title>Preston Town Page | Weathering Weather</title>
+
+<!--FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!--STYLESHEETS-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+</head>
+
+<body>
+
+<!--HEADER-->
+    <div id="headerWrapper">
+        <header class="clearfix">
+            <picture>
+                <img src="images/weather_logo.png">
+            </picture>
+            <div class="headings">
+                <h1>Weathering Weather</h1>
+                <h2>Weathering the weather, whether the weather needs weathering or not!</h2>
+            </div>
+        </header>
+    </div>  
+
+<!--NAVIGATION-->    
+    <div id="navWrapper">
+        <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776;</button>
+            <ul id="primaryNav" class="hide">
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">Preston</a></li>
+                <li><a href="#">Soda Springs</a></li>
+                <li><a href="#">Fish Haven</a></li>
+                <li><a href="#">Storm Center</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+<!--CONTENT-->
+    <main>
+        <h1>Preston</h1>
+
+        <div>Hero image/Weather Summary placeholder here</div>
+
+        <div>Five-Day Forecast placeholder here</div>
+
+        <div>Five-Day Forecast placeholder here</div>
+    </main>
+
+<!--FOOTER-->
+    <div id="footerWrapper">
+        <footer>
+            <p>
+                &copy; <span id="year"></span> | Branden Torrance | <a href="https://spacescapist.github.io/index.html">Branden's Assignment Portal</a>
+            </p>
+        </footer>
+    </div>
+
+<!--SCRIPT-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

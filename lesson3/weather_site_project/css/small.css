@@ -20,7 +20,7 @@ header {
 }
 header img {float: left; width: 75px; margin-top: -15px}
 header h1 {margin: 0; font-size: 1.5rem;}
-header h2 {margin: 0; font-weight: normal; font-size: 1rem;}
+header h2 {margin: 0; font-weight: normal; font-size: 1rem; font-style: italic;}
 h1, h2, h3 {font-family: 'Josefin Sans', sans-serif;}
 
 /*----------- NAVIGATION --------------*/

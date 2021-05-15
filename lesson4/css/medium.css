@@ -1,0 +1,44 @@
+/* 35rem = 560px @ 16px base */
+@media only screen and (min-width: 38.125rem) {
+
+
+/*----------- BODY --------------*/
+
+
+/*----------- HEADER --------------*/
+    header img {
+        width: 100px;
+    }
+    header h1 {
+        font-size: 1.7rem;
+    }
+    header h2 {
+        font-size: 1rem; 
+    }
+
+
+/*----------- NAVIGATION --------------*/
+    nav button {
+        display: none;
+    }
+    nav ul {
+        margin-left: 2%;
+    }
+    nav ul.hide {
+        display: block;
+    }
+    nav ul li {
+        float: left;
+    }
+    nav ul li a {
+        border: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+        padding: .8rem 1rem;
+    }
+
+/*----------- MAIN --------------*/
+
+
+/*----------- FOOTER --------------*/
+
+} /* End of media query */
