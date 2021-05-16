@@ -77,12 +77,19 @@ nav ul li.active a {
 nav ul li a:hover {
     background-color: #AD343E;
 }
-
+.buttonText {
+    display: grid;
+    color: #fff;
+    font-weight: normal;
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: 1fr; 
+}
 
 /*----------- MAIN --------------*/
 main div {
     background-color: lightgrey;
-    margin: 10px;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 
