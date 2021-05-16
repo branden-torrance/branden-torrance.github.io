@@ -64,6 +64,13 @@ nav button {
     font-size: 1.6rem;
     color: #fff;
 }
+.buttonText {
+    display: grid;
+    color: #fff;
+    font-weight: normal;
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: 1fr; 
+}
 nav ul li a {
     display: block;
     padding: .8rem 2%;
@@ -77,19 +84,15 @@ nav ul li.active a {
 nav ul li a:hover {
     background-color: #AD343E;
 }
-.buttonText {
-    display: grid;
-    color: #fff;
-    font-weight: normal;
-    grid-template-columns: 48px 1fr;
-    grid-template-rows: 1fr; 
-}
 
 /*----------- MAIN --------------*/
+main h1 {
+    margin-left: 2%;
+}
 main div {
     background-color: lightgrey;
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem 2%;
 }
 
 
