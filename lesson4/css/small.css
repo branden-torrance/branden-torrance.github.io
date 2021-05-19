@@ -102,12 +102,15 @@ main div {
 }
 footer {
     font-family: 'Josefin Sans', sans-serif;
-    padding: .5rem 2%;
+    padding: .1rem 2%;
     text-align: center;
     color: #fff;
 }
 footer a {
     color: white;
+}
+.date {
+    color: #F2AF29;
 }
 
 
