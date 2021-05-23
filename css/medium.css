@@ -1,5 +1,5 @@
 /* 'medium' media query section*/
-@media only screen and (min-width: 32.5em) {
+@media only screen and (min-width: 43.75em) {
     h1 {
         font-size: 2.5em;
     }
