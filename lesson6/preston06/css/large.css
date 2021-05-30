@@ -1,0 +1,60 @@
+/* 70rem = 1120px @ 16px base */
+@media only screen and (min-width: 65rem) {
+
+/*----------- BODY --------------*/
+    header, nav, main, footer {
+        max-width: 65rem;
+        margin: 0 auto;
+    }
+
+/*----------- HEADER --------------*/
+    header img {
+        width: 120px;
+    }
+    header h1 { 
+        font-size: 2rem;
+    }
+    header h2 { 
+        font-size: 1.3rem; 
+    }
+
+
+/*----------- NAVIGATION --------------*/
+
+
+/*----------- MAIN --------------*/
+.forecast_heading {
+    font-size: 1.8rem;
+}
+section.forecast {
+    width: 80%;
+}
+section.forecast div h5 {
+    background-color: #F2AF29;
+    margin: 0;
+    padding: .5rem;
+    font-size: 1rem;
+}
+section.forecast div img {
+    width: 128px;
+    height: auto;
+}
+section.forecast div p {
+    font-size: 1.2rem;
+}
+.main_map img {
+    width: 70%;
+}
+.main_map p {
+    float: right;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 150px;
+}
+
+/*----------- FOOTER --------------*/
+
+
+
+
+} /* End of media query */
