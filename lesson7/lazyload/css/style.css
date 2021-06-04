@@ -13,6 +13,6 @@ img[data-src] {
 }
 
 img {
-    filter: 0;
+    filter: blur(0);
     transition: filter 1s;
 }
