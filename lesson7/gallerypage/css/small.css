@@ -1,0 +1,235 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body{
+    padding: 0;
+    margin: 0;
+    font-size: .9rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*----------- HEADER --------------*/
+#headerWrapper {
+    background-color: #F2AF29;
+}
+header {
+    padding: .1rem 2%;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+header img {
+    width: 80px;
+    height: auto;
+}
+.headings {
+    display: flex;
+    flex-direction: column;
+}
+header h1 {
+    margin: 0; 
+    font-size: 1.4rem;
+}
+header h2 {
+    margin: 0; 
+    font-weight: normal; 
+    font-size: .8rem; 
+    font-style: italic;
+}
+h1, h2, h3 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/*----------- NAVIGATION --------------*/
+#navWrapper {
+    background-color: #474747;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul.hide {
+    display: none;
+}
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+.buttonText {
+    display: grid;
+    color: #fff;
+    font-weight: normal;
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: 1fr; 
+}
+nav ul li a {
+    display: block;
+    padding: .8rem 2%;
+    text-decoration: none;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+nav ul li.active a {
+    background-color: #AD343E;
+}
+nav ul li a:hover {
+    background-color: #AD343E;
+}
+
+/*----------- MAIN --------------*/
+main h1 {
+    margin: 3%;
+    font-size: 2rem;
+    text-align: center;
+}
+.forecast_heading {
+    display: none;
+}
+.hero_img {
+    width: 100%;
+    height: auto;
+}
+.hero_parent {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.hero_child {
+    margin: 0;
+    background-color: #474747;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: .1rem;
+}
+.hero_child ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: .5rem;
+    line-height: 1.2rem;
+}
+.hero_child h2 {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin: 0;
+    padding: 8px 0;
+}
+.hero_child .weather_summary {
+    color: #F2AF29;
+}
+main div {
+    background-color: lightgrey;
+    padding: 1rem;
+    margin: 1rem 2%;
+}
+div#bannerMessage {
+    background-image: linear-gradient(#474747, #AD343E);
+    color: white;
+    padding: 1rem 2%;
+    text-align: center;
+    font-size: .9rem;
+    font-family: 'Open Sans', sans-serif;
+}
+div.showme {
+    display: block;
+}
+div.hideme {
+    display: none;
+}
+.forecast {
+    display: none;
+}
+.main_article img {
+    width: 100%;
+}
+.main_map img {
+    width: 100%;
+}
+.main_map p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/*----------- FOOTER --------------*/
+#footerWrapper {
+    background-color: #474747;
+}
+footer {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: .1rem 2%;
+    text-align: center;
+    color: #fff;
+}
+footer a {
+    color: white;
+}
+.date {
+    color: #F2AF29;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/*=====================================================================================================*/
+/*======================================= Weather Gallery =============================================*/
+/*=====================================================================================================*/
+
+/*----------- BODY --------------*/
+
+
+/*----------- HEADER --------------*/
+
+
+/*----------- NAVIGATION --------------*/
+
+
+/*----------- MAIN --------------*/
+main .gallery_grid {
+    display: grid;
+    margin: 0 2% 3rem 2%;
+    padding: 0;
+    grid-template-columns: 1fr;
+    background-color: white;
+    justify-items: center;
+}
+main .gallery_grid figure {
+    margin: 1rem 2%;
+    box-shadow: 1px 1px 10px #333;
+}
+.gallery_grid figure figcaption {
+    font-style: italic;
+    padding: .35rem;
+}
+main .gallery_grid figure img {
+    width: 100%;
+    height: auto;
+    filter: blur(0);
+    transition: filter .5s;
+}
+main .gallery_grid figure img[data-src] {
+    filter: blur(.3rem);
+}
+
+
+
+/*----------- FOOTER --------------*/
+
+
+
+/* End of media query */
