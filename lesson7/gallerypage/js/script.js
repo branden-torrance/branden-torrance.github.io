@@ -72,3 +72,21 @@ const imgObserver = new IntersectionObserver((entries, imgObserver) => {
 images.forEach(image => {
     imgObserver.observe(image);
 });
+
+//==================================================================================================
+// Code for Last Visited
+
+let visitNow = new Date();
+let visitLast = new Date(localStorage.getItem("lastVisit"));
+const oneDay = 1000 * 60 * 60 * 24;
+const timeDiff = visitLast.getTime() - visitNow.getTime();
+const daysDiff = Math.round(timeDiff / oneDay);
+
+if (daysDiff == 1) {
+    document.getElementById('lastVisit').innerHTML = "1 day ago";
+}
+else {
+    document.getElementById('lastVisit').innerHTML = daysDiff + " days ago";
+}
+
+localStorage.setItem("lastVisit", visitNow);
