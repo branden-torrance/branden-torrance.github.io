@@ -1,0 +1,25 @@
+/*31.25rem = 500px @ 16px base*/
+@media only screen and (min-width: 31.25rem) {
+
+    table {
+        width: unset;
+    }
+    
+    thead tr th {
+        font-size: 2rem;
+    }
+
+    tbody tr th {
+        font-size: 1.4rem;
+    }
+
+    tbody tr td {
+        font-size: 1.2rem;
+    }
+
+    tfoot tr td {
+        font-size: .9rem;
+    }
+
+
+} /* End of media query */

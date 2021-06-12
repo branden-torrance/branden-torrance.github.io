@@ -1,0 +1,21 @@
+/*56.25rem = 900px @ 16px base*/
+@media only screen and (min-width: 56.25rem) {
+    
+    thead tr th {
+        font-size: 2.5rem;
+    }
+
+    tbody tr th {
+        font-size: 1.6rem;
+    }
+    
+    tbody tr td{
+        font-size: 1.4rem;
+    }
+
+    tfoot tr td {
+        font-size: 1rem;
+    }
+
+
+} /* End of media query */
