@@ -1,0 +1,84 @@
+/* 70rem = 1120px @ 16px base */
+@media only screen and (min-width: 70rem) {
+
+    /*----------- BODY --------------*/
+        header, nav, main, footer {
+            max-width: 70rem;
+            margin: 0 auto;
+        }
+    
+    /*----------- HEADER --------------*/
+        header img {
+            width: 120px;
+        }
+        header h1 { 
+            font-size: 2rem;
+        }
+        header h2 { 
+            font-size: 1.3rem; 
+        }
+    
+    
+    /*----------- NAVIGATION --------------*/
+    
+    
+    /*----------- MAIN --------------*/
+    .forecast_heading {
+        font-size: 1.8rem;
+    }
+    section.forecast {
+        width: 80%;
+    }
+    section.forecast div h5 {
+        background-color: #F2AF29;
+        margin: 0;
+        padding: .5rem;
+        font-size: 1rem;
+    }
+    section.forecast div img {
+        width: 128px;
+        height: auto;
+    }
+    section.forecast div p {
+        font-size: 1.2rem;
+    }
+    .main_map img {
+        width: 70%;
+    }
+    .main_map p {
+        float: right;
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 150px;
+    }
+    
+    /*----------- FOOTER --------------*/
+    
+    
+    /*=====================================================================================================*/
+    /*======================================= Weather Gallery =============================================*/
+    /*=====================================================================================================*/
+    
+    /*----------- BODY --------------*/
+    
+    
+    /*----------- HEADER --------------*/
+    
+    
+    /*----------- NAVIGATION --------------*/
+    
+    
+    /*----------- MAIN --------------*/
+    main .gallery_grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    main .gallery_grid figure:hover {
+        box-shadow: 5px 12px 5px #333;
+        transition: .5s;
+    }
+    
+    /*----------- FOOTER --------------*/
+    
+    
+    
+    } /* End of media query */
