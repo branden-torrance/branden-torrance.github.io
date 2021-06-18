@@ -1,3 +1,9 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
 .content {
     max-width: 750px;
     margin: 0 auto;
@@ -18,11 +24,17 @@ footer {
     padding: 1px;
     color: white;
     font-family: Roboto, Helvetica, sans-serif;
+    font-size: .9rem;
 }
 ul {
     font-size: 1em;
     margin-bottom: 40px;
     font-family: Roboto, Helvetica, sans-serif;
+    list-style-type: none;
+    padding-left: 20px;
+}
+li {
+    margin-top: 1rem;
 }
 h1 {
     font-size: 2em;

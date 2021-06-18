@@ -1,5 +1,5 @@
 /* 'medium' media query section*/
-@media only screen and (min-width: 43.75em) {
+@media only screen and (min-width: 41.875em) {
     h1 {
         font-size: 2.5em;
     }
@@ -22,4 +22,8 @@
     ul {
         font-size: 1.1em;
     }
+    footer {
+        font-size: 1rem;
+    }
+
 }
