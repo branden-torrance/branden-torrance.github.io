@@ -85,6 +85,9 @@ const daysDiff = Math.round(timeDiff / oneDay);
 if (daysDiff == 1) {
     document.getElementById('lastVisit').innerHTML = "1 day ago";
 }
+else if (daysDiff < 0) {
+    document.getElementById('lastVisit').innerHTML = "0 days ago";
+}
 else {
     document.getElementById('lastVisit').innerHTML = daysDiff + " days ago";
 }

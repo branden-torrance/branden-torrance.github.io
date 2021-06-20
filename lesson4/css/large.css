@@ -1,5 +1,5 @@
-/* 70rem = 1120px @ 16px base */
-@media only screen and (min-width: 65rem) {
+/* 63.75rem = 1020px @ 16px base */
+@media only screen and (min-width: 63.75rem) {
 
 /*----------- BODY --------------*/
     header, nav, main, footer {

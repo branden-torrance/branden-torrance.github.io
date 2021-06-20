@@ -171,5 +171,48 @@
         font-size: 1rem;
     }
 
+
+
+    /*=====================================================================================================*/
+    /*===================================== Home Page Wireframes ==========================================*/
+    /*=====================================================================================================*/
+
+    .wireframes {
+        grid-template-columns: 1fr 1fr;
+    }
+    .wireframes img {
+        padding: 0;
+        border: none;
+    }
+
+
+
+    /*=====================================================================================================*/
+    /*========================================== Home Page ================================================*/
+    /*=====================================================================================================*/
+
+    main .townsDiv section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 1rem 0;
+    }
+    main .townsDiv img {
+        transform: translateY(0);
+    }
+    main .townsDiv section div {
+        align-self: center;
+    }
+    main .townsDiv section:nth-child(odd) img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    main .townsDiv section:nth-child(odd) div {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    main .townsDiv section img {
+        align-self: center;
+    }
+
     } /* End of media query */
     
