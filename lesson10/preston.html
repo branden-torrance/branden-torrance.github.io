@@ -13,13 +13,6 @@
     <link rel="stylesheet" href="css/small.css">
     <link rel="stylesheet" href="css/medium.css">
     <link rel="stylesheet" href="css/large.css">
-
-<!--SCRIPTS-->
-    <script src="js/script.js"></script>
-
-    <!--FONT-->
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>WebFont.load({google: {families: ["Josefin+Sans", "Open+Sans"]}});</script>
 </head>
 
 <body>
@@ -72,12 +65,12 @@
             <div class="hero_child">
                 <h2>Today's Weather</h2>
                 <ul>
-                    <li>Currently: <label class="weather_summary">
+                    <li>Sky: <label class="weather_summary">
                         <span id="weatherDesc"></span></label></li>
                     <li>Temperature: <label class="weather_summary">
                         <span id="temperature"></span>&deg;F</label></li>
                     <li>Humidity: <label class="weather_summary">
-                        <span id="humidity"></span></label></li>
+                        <span id="humidity"></span>%</label></li>
                     <li>Wind Speed: <label class="weather_summary">
                         <span id="windspeed"></span> mph</label></li>
                     <li>Windchill: <label class="weather_summary">
@@ -155,14 +148,21 @@
     </main>
 
 <!--FOOTER-->
-    <div id="footerWrapper">
-        <footer>
-            <p>
-                &copy; Branden Torrance | <a href="https://spacescapist.github.io">Branden's Assignment Portal</a>
-            </p>
-            <p class="date"></p>
-        </footer>
-    </div>
+<div id="footerWrapper">
+    <footer>
+        <p>
+            &copy; Branden Torrance | <a href="https://spacescapist.github.io">Branden's Assignment Portal</a>
+        </p>
+        <p>Today: <span class="date"></span></p>
+        <p>Last Visited: <span id="lastVisit"></span></p>
+    </footer>
+</div>
 
+<!--SCRIPTS-->
+    <!--FONT-->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>WebFont.load({google: {families: ["Josefin+Sans", "Open+Sans"]}});</script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

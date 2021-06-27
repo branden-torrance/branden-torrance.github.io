@@ -118,10 +118,10 @@ fetch(apiURL)
         //console.log(weatherStats);
 
     // Weather Description
-        const desc = weatherStats.weather[0].description   // Note that we are referencing an array index of 0 from weather.
-        const weatherDesc = document.querySelector("#weatherDesc");
-        // Use innerHTML if you want to apply html tags such as <strong>
-        weatherDesc.innerHTML = `${desc.toUpperCase()}`;
+        // document.querySelector("#weatherDesc").textContent = weatherStats.weather[0].description.toUpperCase();
+
+        document.querySelector("#weatherDesc").textContent = 
+            weatherStats.weather[0].description.replace(/(^\w{1})|(\s+\w{1})/g,(first) => first.toUpperCase());
 
     // Current Temperature
         document.querySelector('#temperature').textContent = weatherStats.main.temp.toFixed(0);   // Round the temperature to NO decimal places
@@ -130,7 +130,7 @@ fetch(apiURL)
         document.querySelector('#humidity').textContent = weatherStats.main.humidity;
 
     // Wind Speed
-        document.querySelector("#windspeed").textContent = weatherStats.wind.speed;
+        document.querySelector("#windspeed").textContent = weatherStats.wind.speed.toFixed(0);
 
     });
     
