@@ -1,8 +1,17 @@
+//==================================================================================================
+// Global Variables
+const page = document.querySelector("#pageName");
+
+
+
+//==================================================================================================
 // JavaScript code to toggle "hide" for the dropdown menu
 
 function toggleMenu() {
     document.getElementById("primaryNav").classList.toggle("hide");
 }
+
+
 
 //==================================================================================================
 // Code for Date
@@ -10,9 +19,7 @@ function toggleMenu() {
 const datefield = document.querySelector(".date");
 
 const now = new Date();
-const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(now);   // "now" is using the created variable... 
-                                                                                            // ... for new Date on line #11
-
+const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(now);
 // instead of "full" for dateStyle, you can also use options of "long", "medium", or "short"
 
 datefield.textContent = fulldate;
@@ -22,6 +29,7 @@ datefield.textContent = fulldate;
     // .textContent does not support embedded html code.
 
 
+
 //==================================================================================================
 // Code for bannerMessage toggle
 
@@ -29,12 +37,13 @@ const today = new Date();
 const dayNumber = today.getDay();
 
 const element = document.getElementById("bannerMessage");
-if (dayNumber == 5) {                             // Day "5" is Friday
+if (dayNumber == 5) {
     element.classList.add("showme");
 } 
 else {
     element.classList.add("hideme")
-}
+};
+
 
 
 //==================================================================================================
@@ -59,88 +68,51 @@ else {
 localStorage.setItem("lastVisit", visitNow);
 
 
+
 //==================================================================================================
-// Town Data
+// Code for lazy-load on Weather Gallery page
 
-const requestURL = "https://byui-cit230.github.io/weather/data/towndata.json"
+const images = document.querySelectorAll("[data-src]")
 
-fetch(requestURL)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (jsonObject) {
-    // console.table(jsonObject);  // temporary checking for valid response and data parsing
-    const townData = jsonObject["towns"];
+function preloadImage(img) {
+    const src = img.getAttribute("data-src");
+    if(!src) {
+        return;
+    }
 
-    const towns = townData.filter(town => town.name == "Preston" || town.name == "Fish Haven" || town.name == "Soda Springs");
+    img.src = src;
 
-    towns.forEach(town => {
-        let card = document.createElement('section');
-        let dataDiv = document.createElement('div');
-        let h2 = document.createElement('h2');
-        let h3 = document.createElement('h3');
-        let p1 = document.createElement('p');
-        let p2 = document.createElement('p');
-        let p3 = document.createElement('p');
-        let img = document.createElement('img');
+    img.onload = () => {img.removeAttribute("data-src");};
+};
 
-        h2.textContent = `${town.name}`;
-        h3.textContent = `${town.motto}`;
-        p1.textContent = `Year Founded: ${town.yearFounded}`;
-        p2.textContent = `Current Population: ${town.currentPopulation}`;
-        p3.textContent = `Annual Rain Fall: ${town.averageRainfall}`;
-        img.setAttribute('src', `images/${town.photo}`);
-        img.setAttribute('alt', `${town.name} town image`);
+const imgOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -100px 0px"
+};
 
-        card.appendChild(dataDiv);
-        dataDiv.appendChild(h2);
-        dataDiv.appendChild(h3);
-        dataDiv.appendChild(p1);
-        dataDiv.appendChild(p2);
-        dataDiv.appendChild(p3);
-        card.appendChild(img)
-
-        document.querySelector('div.townsDiv').appendChild(card);
+const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            preloadImage(entry.target);
+            imgObserver.unobserve(entry.target);
+        }
     })
-  });
+}, imgOptions)
+
+images.forEach(image => {
+    imgObserver.observe(image);
+});
+
+
 
 //==================================================================================================
-// Weather Data
+// Rating Slider for Storm Center
 
-const cityid = "5604473"    // City code for Preston, ID
-const APPID = "91e39d550becd7d7ebdbb386ee865519"    // My personal APPID code
-
-const apiURL = `https://api.openweathermap.org/data/2.5/weather?id=${cityid}&appid=${APPID}&units=imperial`;
-
-fetch(apiURL)
-    .then((response) => response.json())
-    .then((weatherStats) => {
-        //console.log(weatherStats);
-
-    // Weather Description
-        // document.querySelector("#weatherDesc").textContent = weatherStats.weather[0].description.toUpperCase();
-
-        document.querySelector("#weatherDesc").textContent = 
-            weatherStats.weather[0].description.replace(/(^\w{1})|(\s+\w{1})/g,(first) => first.toUpperCase());
-
-    // Current Temperature
-        document.querySelector('#temperature').textContent = weatherStats.main.temp.toFixed(0);   // Round the temperature to NO decimal places
-
-    // Humidity
-        document.querySelector('#humidity').textContent = weatherStats.main.humidity;
-
-    // Wind Speed
-        document.querySelector("#windspeed").textContent = weatherStats.wind.speed.toFixed(0);
-
-    });
-    
-    // // Weather icon/image
-    //     const imagesrc = `http://openweathermap.org/img/w/${weatherStats.weather[0].icon}.png`;
-    //     document.getElementById('imagesrc').textContent = imagesrc;
-    //     document.getElementById('icon').setAttribute('src', imagesrc);
-    //     document.getElementById('icon').setAttribute('alt', desc.toUpperCase())
-    // });
-
+function adjustRating(rating) {
+    document.getElementById("ratingvalue").innerHTML = rating;
+}
 
 
 //==================================================================================================
@@ -159,3 +131,125 @@ if(t <= 50 && s > 3) {
 else {
     document.getElementById("chill").textContent = "None"
 };
+
+
+
+//==================================================================================================
+// Town Data
+
+if (page.textContent == "Home") {
+    const requestURL = "https://byui-cit230.github.io/weather/data/towndata.json";
+
+    fetch(requestURL)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (jsonObject) {
+        // console.table(jsonObject);
+        const townData = jsonObject["towns"];
+
+        const towns = townData.filter(town => town.name == "Preston" || town.name == "Fish Haven" || town.name == "Soda Springs");
+
+        towns.forEach(town => {
+            let card = document.createElement('section');
+            let dataDiv = document.createElement('div');
+            let h2 = document.createElement('h2');
+            let h3 = document.createElement('h3');
+            let p1 = document.createElement('p');
+            let p2 = document.createElement('p');
+            let p3 = document.createElement('p');
+            let img = document.createElement('img');
+
+            h2.textContent = `${town.name}`;
+            h3.textContent = `${town.motto}`;
+            p1.textContent = `Year Founded: ${town.yearFounded}`;
+            p2.textContent = `Current Population: ${town.currentPopulation}`;
+            p3.textContent = `Annual Rain Fall: ${town.averageRainfall}`;
+            img.setAttribute('src', `images/${town.photo}`);
+            img.setAttribute('alt', `${town.name} town image`);
+
+            card.appendChild(dataDiv);
+            dataDiv.appendChild(h2);
+            dataDiv.appendChild(h3);
+            dataDiv.appendChild(p1);
+            dataDiv.appendChild(p2);
+            dataDiv.appendChild(p3);
+            card.appendChild(img)
+
+            document.querySelector('.townsDiv').appendChild(card);
+        })
+    })
+};  
+
+
+
+//==================================================================================================
+// Weather Summary for Preston, Soda Springs, and Fish Haven
+
+if (page.textContent == "Preston") {
+    cityid = "5604473";
+}
+else if (page.textContent == "Soda Springs") {
+    cityid = "5607916";
+}
+else if (page.textContent == "Fish Haven") {
+    cityid = "5585000";
+}
+    
+const APPID = "91e39d550becd7d7ebdbb386ee865519"
+const weatherURL = `https://api.openweathermap.org/data/2.5/weather?id=${cityid}&appid=${APPID}&units=imperial`;
+
+fetch(weatherURL)
+    .then((response) => response.json())
+    .then((weatherStats) => {
+        //console.log(weatherStats);
+
+        // Weather Description
+        document.querySelector("#weatherDesc").textContent = 
+            weatherStats.weather[0].description.replace(/(^\w{1})|(\s+\w{1})/g,(first) => first.toUpperCase());
+
+        // Current Temperature
+        document.querySelector('#temperature').textContent = weatherStats.main.temp.toFixed(0);   // Round the temperature to zero decimal places
+
+        // Humidity
+        document.querySelector('#humidity').textContent = weatherStats.main.humidity;
+
+        // Wind Speed
+        document.querySelector("#windspeed").textContent = weatherStats.wind.speed.toFixed(0);
+    });
+
+
+
+//==================================================================================================
+// 5 Day Forecast for Preston, Soda Springs, and Fish Haven
+
+const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?id=${cityid}&appid=${APPID}&units=imperial`;
+
+fetch(forecastURL)
+    .then((response) => response.json())
+    .then((forecastData) => {
+        // console.log(forecastData);
+        let day = 0;
+        const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+        const fiveDayForecast = forecastData.list.filter(forecast => forecast.dt_txt.includes("18:00:00"));
+        // console.log(fiveDayForecast);
+
+
+        // loop through each day in forecast
+        fiveDayForecast.forEach( x => {
+            let d = new Date(x.dt_txt);
+            // console.log(d);
+
+            const weatherDesc = x.weather[0].description;
+            const imageCode = x.weather[0].icon;
+            const imagePath = `//openweathermap.org/img/wn/${imageCode}.png`;
+
+            document.querySelector(`#forecastDay${day+1}`).textContent = dayofWeek[d.getDay()];
+            document.querySelector(`#forecastImage${day+1}`).src = imagePath;
+            document.querySelector(`#forecastImage${day+1}`).setAttribute('alt', weatherDesc);
+            document.querySelector(`#forecastTemp${day+1}`).textContent = x.main.temp.toFixed(0);
+            day++
+        
+        });
+    });

@@ -36,7 +36,7 @@
         font-size: 1rem;
     }
     section.forecast div img {
-        width: 128px;
+        width: 100px;
         height: auto;
     }
     section.forecast div p {
