@@ -23,6 +23,9 @@
     
     
     /*----------- MAIN --------------*/
+    main h1 {
+        font-size: 2.5rem;
+    }
     .forecast_heading {
         font-size: 1.8rem;
     }
@@ -30,26 +33,10 @@
         width: 80%;
     }
     section.forecast div h5 {
-        background-color: #F2AF29;
-        margin: 0;
-        padding: .5rem;
         font-size: 1rem;
-    }
-    section.forecast div img {
-        width: 100px;
-        height: auto;
     }
     section.forecast div p {
         font-size: 1.2rem;
-    }
-    .main_map img {
-        width: 70%;
-    }
-    .main_map p {
-        float: right;
-        text-align: center;
-        font-size: 1rem;
-        margin-top: 150px;
     }
     
     /*----------- FOOTER --------------*/
@@ -103,9 +90,6 @@
     main .townsDiv section {
         display: unset;
         margin: .5rem;
-    }
-    main .townsDiv img {
-        transform: translateY(1.5%);
     }
     
     

@@ -10,6 +10,7 @@ body{
     padding: 0;
     margin: 0;
     font-size: .9rem;
+    line-height: 1.2rem;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -32,13 +33,13 @@ header img {
     flex-direction: column;
 }
 header h1 {
-    margin: 0; 
+    margin-bottom: .5rem; 
     font-size: 1.4rem;
 }
 header h2 {
     margin: 0; 
     font-weight: normal; 
-    font-size: .8rem; 
+    font-size: .85rem; 
     font-style: italic;
 }
 h1, h2, h3 {
@@ -88,7 +89,7 @@ nav ul li a:hover {
 
 /*----------- MAIN --------------*/
 main h1 {
-    margin: 3%;
+    margin: 1.5rem;
     font-size: 2rem;
     text-align: center;
 }
@@ -105,7 +106,8 @@ main h1 {
     background-color: white;
 }
 .hero_child {
-    margin: 0;
+    margin: -.3rem;
+    margin-bottom: 2rem;
     background-color: #474747;
     color: white;
     font-size: 1rem;
@@ -153,12 +155,31 @@ div.hideme {
 .main_article img {
     width: 100%;
 }
+main div.upcoming_events {
+    text-align: center;
+    width: 96%;
+    margin: 2rem auto 2rem auto;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px black;
+    background-color: #F2AF29;
+    font-size: .9rem;
+}
+.main_map {
+    margin-bottom: 2rem;
+}
 .main_map img {
     width: 100%;
 }
-.main_map p {
+.main_map span {
+    display: block;
     text-align: center;
-    font-size: 1rem;
+    font-size: .9rem;
+    padding: 1rem;
+}
+hr {
+    height: 1px;
+    background-color: black;
+    border: none;
 }
 
 /*----------- FOOTER --------------*/
@@ -170,6 +191,7 @@ footer {
     padding: .1rem 2%;
     text-align: center;
     color: #fff;
+    line-height: .7rem;
 }
 footer a {
     color: white;
@@ -185,6 +207,61 @@ footer a {
     display: table;
     clear: both;
   }
+
+  
+
+/*=====================================================================================================*/
+/*===================================== Home Page Wireframes ==========================================*/
+/*=====================================================================================================*/
+
+.wireframes {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0;
+    background-color: white;
+}
+.wireframes img {
+    width: 100%;
+    padding-bottom: 1rem;
+    height: auto;
+    margin: 1rem 0 1rem 0;
+    border-bottom: 2px solid black;
+}
+
+
+
+/*=====================================================================================================*/
+/*========================================== Home Page ================================================*/
+/*=====================================================================================================*/
+
+main .townsDiv {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    text-align: center;
+    padding: 0;
+}
+main .townsDiv img {
+    width: 100%;
+    /* transform: translateY(1%) */
+    vertical-align: bottom;
+}
+main .townsDiv section {
+    background-color: #F2AF29;
+    margin: 1rem 0;
+    border: 1px solid black;
+}
+main .townsDiv h3 {
+    font-size: .85rem;
+    margin-top: -.8rem;
+}
+main .townsDiv section div {
+    background-color: transparent;
+    padding: 0;
+}
+
+
 
 /*=====================================================================================================*/
 /*======================================= Weather Gallery =============================================*/
@@ -323,54 +400,5 @@ form textarea {
 /*----------- FOOTER --------------*/
 
 
-/*=====================================================================================================*/
-/*===================================== Home Page Wireframes ==========================================*/
-/*=====================================================================================================*/
-
-.wireframes {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    padding: 0;
-    background-color: white;
-}
-.wireframes img {
-    width: 100%;
-    padding-bottom: 1rem;
-    height: auto;
-    margin: 1rem 0 1rem 0;
-    border-bottom: 2px solid black;
-}
-
-
-
-/*=====================================================================================================*/
-/*========================================== Home Page ================================================*/
-/*=====================================================================================================*/
-
-main .townsDiv {
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color: white;
-    text-align: center;
-    padding: 0;
-}
-main .townsDiv img {
-    width: 100%;
-    transform: translateY(1%)
-}
-main .townsDiv section {
-    background-color: #F2AF29;
-    margin: 1rem 0;
-    border: 1px solid black;
-}
-main .townsDiv h3 {
-    font-size: .85rem;
-    margin-top: -.8rem;
-}
-main .townsDiv section div {
-    background-color: transparent;
-    padding: 0;
-}
 
 /* End of media query */

@@ -38,10 +38,9 @@
     
     /*----------- MAIN --------------*/
     main h1 {
-        margin: 1.5% 3%;
-        font-size: 2.3rem;
+        font-size: 2.2rem;
         text-align: left;
-    
+        margin: 2rem;
     }
     .forecast_heading {
         display: block;
@@ -59,12 +58,13 @@
         position: absolute;
         top: 10px;
         left: 10px;
-        padding: .5rem;
+        padding: .5rem 2rem;
         background-color: rgba(0, 0, 0, 0.8);
         border: 2px solid black;
+        /* font-size: 1.1rem; */
     }
     .hero_child ul {
-        line-height: 1.4rem;
+        line-height: 1.5rem;
     }
     .hero_child h2 {
         font-size: 1.3rem;
@@ -73,16 +73,20 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto 3rem auto;
     }
     section.forecast div {
         text-align: center;
         border: 1px solid #aaa;
-        background-color: white;
+        background-color: lightgrey;
         padding: 0;
+        box-shadow: 5px 5px 5px #333;
+        border-radius: 20%;
+        overflow: hidden;
     }
     section.forecast div h5 {
-        background-color: #F2AF29;
+        background-color: #AD343E;
+        color: white;
         margin: 0;
         padding: .5rem;
         font-size: .9rem;
@@ -100,6 +104,21 @@
         width: 50%;
         min-width: 380px;
         float: right;
+    }
+    main div.upcoming_events {
+        width: 55%;
+        font-size: 1rem;
+    }
+    .main_map {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+    .main_map span {
+        padding: 0;
+        font-size: 1rem;
+        text-align: center;
+        align-self: center;
     }
     
     /*----------- FOOTER --------------*/
@@ -196,9 +215,6 @@
         grid-template-columns: 1fr 1fr;
         margin: 1rem 0;
     }
-    main .townsDiv img {
-        transform: translateY(0);
-    }
     main .townsDiv section div {
         align-self: center;
     }
@@ -213,6 +229,7 @@
     main .townsDiv section img {
         align-self: center;
     }
+
 
     } /* End of media query */
     

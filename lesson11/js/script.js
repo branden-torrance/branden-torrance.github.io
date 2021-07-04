@@ -127,7 +127,7 @@ if (page.textContent == "Home") {
         return response.json();
     })
     .then(function (jsonObject) {
-        // console.table(jsonObject);
+        // console.log(jsonObject);
         const townData = jsonObject["towns"];
 
         const towns = townData.filter(town => town.name == "Preston" || town.name == "Fish Haven" || town.name == "Soda Springs");
@@ -162,7 +162,6 @@ if (page.textContent == "Home") {
         })
     })
 };  
-
 
 
 //==================================================================================================
@@ -253,8 +252,31 @@ if (page.textContent == "Preston" || page.textContent == "Soda Springs" || page.
     else {
         document.getElementById("chill").textContent = "None"
     };
-};
 
+    //----------------------------------------------------------------------------------------------------------------
+    // Town Events (Still within IF statement from Weather Summary above)
+
+    const eventsURL = "https://byui-cit230.github.io/weather/data/towndata.json";
+
+    fetch(eventsURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (jsonObject) {
+            // console.log(jsonObject);
+            const towns = jsonObject["towns"];
+            const town = towns.filter(towns => towns.name == page.textContent);          
+
+            const events = town[0].events;
+            // console.log(events);
+            events.forEach((event) => {
+                let p = document.createElement("p");
+                p.innerHTML = event;
+                document.querySelector(".upcoming_events").append(p)
+            });
+        });
+
+};  // End of IF statement
 
 //==================================================================================================
 
