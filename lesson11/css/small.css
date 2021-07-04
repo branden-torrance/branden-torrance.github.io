@@ -262,52 +262,6 @@ main .townsDiv section div {
 }
 
 
-
-/*=====================================================================================================*/
-/*======================================= Weather Gallery =============================================*/
-/*=====================================================================================================*/
-
-/*----------- BODY --------------*/
-
-
-/*----------- HEADER --------------*/
-
-
-/*----------- NAVIGATION --------------*/
-
-
-/*----------- MAIN --------------*/
-main .gallery_grid {
-    display: grid;
-    margin: 0 2% 3rem 2%;
-    padding: 0;
-    grid-template-columns: 1fr;
-    background-color: white;
-    justify-items: center;
-}
-main .gallery_grid figure {
-    margin: 1rem 2%;
-    box-shadow: 1px 1px 10px #333;
-}
-.gallery_grid figure figcaption {
-    font-style: italic;
-    padding: .35rem;
-}
-main .gallery_grid figure img {
-    width: 100%;
-    height: auto;
-    filter: blur(0);
-    transition: filter .5s;
-}
-main .gallery_grid figure img[data-src] {
-    filter: blur(.3rem);
-}
-
-
-
-/*----------- FOOTER --------------*/
-
-
 /*=====================================================================================================*/
 /*========================================= Storm Center ==============================================*/
 /*=====================================================================================================*/
@@ -322,6 +276,10 @@ main .gallery_grid figure img[data-src] {
 
 
 /*----------- MAIN --------------*/
+main p#thank_you {
+    text-align: center;
+    padding: 1.5rem;
+}
 
 
 
@@ -399,6 +357,47 @@ form textarea {
 
 /*----------- FOOTER --------------*/
 
+
+
+/*=====================================================================================================*/
+/*======================================= Weather Gallery =============================================*/
+/*=====================================================================================================*/
+
+/*----------- BODY --------------*/
+
+
+/*----------- HEADER --------------*/
+
+
+/*----------- NAVIGATION --------------*/
+
+
+/*----------- MAIN --------------*/
+main .gallery_grid {
+    display: grid;
+    margin: 0 2% 3rem 2%;
+    padding: 0;
+    grid-template-columns: 1fr;
+    background-color: white;
+    justify-items: center;
+}
+main .gallery_grid figure {
+    margin: 1rem 2%;
+    box-shadow: 1px 1px 10px #333;
+}
+.gallery_grid figure figcaption {
+    font-style: italic;
+    padding: .35rem;
+}
+main .gallery_grid figure img {
+    width: 100%;
+    height: auto;
+    filter: blur(0);
+    transition: filter .5s;
+}
+main .gallery_grid figure img[data-src] {
+    filter: blur(.3rem);
+}
 
 
 /* End of media query */
