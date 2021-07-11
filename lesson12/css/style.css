@@ -1,0 +1,51 @@
+/*------------ BODY ------------*/
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1em;
+  }
+
+
+/*------------ HEADER ------------*/
+header {
+    padding: 1em;
+    text-align: center;
+    background-color: #095256;
+    color: white;
+  }
+
+
+/*------------ MAIN ------------*/
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.1rem;
+}
+main h2.center_text {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2rem;
+}
+main #example_heading {
+    font-size: 1.4rem;
+    font-family: "Cinzel", serif;
+    text-align: center;
+}
+main #example_paragraph {
+    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+main #wireframes {
+    text-align: center;
+}
+main #wireframes h3 {
+    text-decoration: underline;
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    text-align: center;
+}
