@@ -178,7 +178,7 @@ if (page.textContent == "Directory") {
         return response.json();
     })
     .then(function (jsonObject) {
-        console.table(jsonObject);
+        // console.table(jsonObject);
     const directory = jsonObject["businessdirectory"];
 
     let number = 1

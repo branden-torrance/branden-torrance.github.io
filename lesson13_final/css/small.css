@@ -346,6 +346,9 @@ main div ul#events {
     padding-right: 1rem;
     margin-bottom: 2rem;
 }
+main div ul#events li {
+    padding: .5rem 0;
+}
 main div#cityEvents img {
     width: 100%;
     align-self: center;
@@ -464,10 +467,14 @@ form.joinForm fieldset div {
     margin: 0;
     background-color: white;
 }
-form.joinForm fieldset div.membershipLevelDescription ul{
+form.joinForm fieldset section.membershipLevelDescription {
+    padding-top: 1rem;
+    color: #095256;
+}
+form.joinForm fieldset section.membershipLevelDescription ul{
     margin-top: 0;
 }
-form.joinForm fieldset div.membershipLevelDescription h3{
+form.joinForm fieldset section.membershipLevelDescription h3{
     margin-bottom: .3rem;
 }
 form.joinForm textarea {
