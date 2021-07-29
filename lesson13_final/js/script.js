@@ -116,17 +116,17 @@ if (page.textContent == "Home") {
         index2 = dayNumber + 2
         index3 = dayNumber + 3
 
-        if (dayNumber == 7) {
-            index1 = 1;
-            index2 = 2;
-            index3 = 3;
-        };
         if (dayNumber == 6) {
+            index1 = 0;
             index2 = 1;
             index3 = 2;
-        };
-        if (dayNumber == 5) {
+        }
+        else if (dayNumber == 5) {
+            index2 = 0;
             index3 = 1;
+        }
+        else if (dayNumber == 4) {
+            index3 = 0;
         };
     
         const forecast1 = weatherStats.daily[index1];
